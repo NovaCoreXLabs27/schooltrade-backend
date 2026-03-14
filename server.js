@@ -14,6 +14,9 @@ app.use(express.json());
 // Routes
 app.use("/products", productRoutes);
 
+const userRoutes = require("./routes/users"); // <-- import the route
+app.use("/users", userRoutes);  // <-- attach it to /users
+
 // Test route
 app.get("/", (req, res) => {
   res.send("SchoolTrade Backend Running");
